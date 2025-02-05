@@ -190,9 +190,9 @@ Certbot automatically installs a cron job to renew certificates, but you can man
 
 ```bash
 docker-compose exec certbot certbot renew
+```
 
-
-## Accessing WordPress
+Accessing WordPress
 
 WordPress will be available at http://localhost:8080.
 Once the SSL certificate is issued by Certbot, it will be available over HTTPS at https://yourdomain.com.
@@ -218,22 +218,23 @@ Restarting Containers
 If you need to restart the containers for any reason (e.g., to apply configuration changes or restart services), you can use:
 ```bash
 docker-compose restart
-
+```
 Debugging Docker Containers
 If you encounter issues with the containers, you can use the following commands to debug:
 
 Check the status of all containers:
 ```bash
 docker-compose ps
-
+```
 View logs for all containers in real-time:
 ```bash
 docker-compose logs -f
-
+```
 View logs for a specific container (e.g., Nginx):
 ```bash
 docker-compose logs nginx
-
+```
 Check running containers on your system:
 ```bash
 docker ps
+```
