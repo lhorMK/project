@@ -191,16 +191,15 @@ Certbot automatically installs a cron job to renew certificates, but you can man
 ```bash
 docker-compose exec certbot certbot renew
 
-Accessing WordPress
+
+## Accessing WordPress
+
 WordPress will be available at http://localhost:8080.
 Once the SSL certificate is issued by Certbot, it will be available over HTTPS at https://yourdomain.com.
-Make sure to replace yourdomain.com with your actual domain name when you update the Nginx configuration.
 Let's Encrypt SSL Certificates
-Certbot will automatically create and renew SSL certificates for your domain. By default, the certificates will be stored in the /your/path/to/certificate directory (or the path specified in your .env file).
+Certbot will automatically create and renew SSL certificates for your domain. By default, the certificates will be stored in the /your/path/to/certificate directory (or the path specified in your .env file). Certbot checks for certificate renewal every 6 hours, and the certificates will be updated automatically.
 
-Certbot checks for certificate renewal every 6 hours, and the certificates will be updated automatically.
-
-Nginx Configuration
+## Nginx Configuration
 The nginx.conf file is preconfigured to:
 
 Handle HTTP to HTTPS redirects.
@@ -208,7 +207,7 @@ Serve your WordPress site over HTTPS using SSL.
 Proxy requests to the WordPress container.
 You can modify the nginx.conf file to suit your needs, for example, by adding custom server blocks or adjusting SSL settings.
 
-Database Configuration
+## Database Configuration
 MariaDB is used as the database backend for WordPress. The database will be automatically configured using the environment variables provided in the docker-compose.yml file.
 
 MYSQL_ROOT_PASSWORD: The root password for MariaDB.
@@ -217,17 +216,24 @@ MYSQL_USER: The username for the WordPress database.
 MYSQL_PASSWORD: The password for the WordPress database user.
 Restarting Containers
 If you need to restart the containers for any reason (e.g., to apply configuration changes or restart services), you can use:
+```bash
 docker-compose restart
 
-If you have trouble with containers, use these commands for debugging:
-# Check the status of all containers
+Debugging Docker Containers
+If you encounter issues with the containers, you can use the following commands to debug:
+
+Check the status of all containers:
+```bash
 docker-compose ps
 
-# View logs for all containers in real-time
+View logs for all containers in real-time:
+```bash
 docker-compose logs -f
 
-# View logs for the specific container (e.g., Nginx)
+View logs for a specific container (e.g., Nginx):
+```bash
 docker-compose logs nginx
 
-# Check running containers on your system
+Check running containers on your system:
+```bash
 docker ps
