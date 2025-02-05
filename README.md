@@ -20,8 +20,8 @@ Before we can enable HTTPS on the server, we need to obtain SSL certificates fro
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
-    cd your-repository
+    git clone https://github.com/lhorMK/project.git
+    cd project
     ```
 
 2. Create the `.env` file in the root directory and configure the following variables:
