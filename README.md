@@ -4,7 +4,14 @@ This project provides a simple setup for deploying WordPress with Nginx as a rev
 
 ## Project Structure
 
-your_project_name/ ├── .env # Environment file with configuration variables ├── .gitignore # Ignores sensitive files like .env ├── docker-compose.yml # Docker Compose configuration ├── nginx.conf # Nginx configuration file ├── webroot/ # Directory for your website files (used by Nginx) ├── wordpress_data/ # WordPress data directory ├── mariadb_data/ # MariaDB data directory └── data/ # Data directory for storing SSL certificates
+your_project_name/ ├── .env # Environment file with configuration variables 
+                   ├── .gitignore # Ignores sensitive files like .env 
+                   ├── docker-compose.yml # Docker Compose configuration 
+                   ├── nginx.conf # Nginx configuration file 
+                   ├── webroot/ # Directory for your website files (used by Nginx) 
+                   ├── wordpress_data/ # WordPress data directory 
+                   ├── mariadb_data/ # MariaDB data directory 
+                   └── data/ # Data directory for storing SSL certificates
 
 ## Requirements
 
