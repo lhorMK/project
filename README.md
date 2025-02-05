@@ -192,8 +192,7 @@ Certbot automatically installs a cron job to renew certificates, but you can man
 docker-compose exec certbot certbot renew
 ```
 
-Accessing WordPress
-
+## Accessing WordPress
 WordPress will be available at http://localhost:8080.
 Once the SSL certificate is issued by Certbot, it will be available over HTTPS at https://yourdomain.com.
 Let's Encrypt SSL Certificates
@@ -211,15 +210,19 @@ You can modify the nginx.conf file to suit your needs, for example, by adding cu
 MariaDB is used as the database backend for WordPress. The database will be automatically configured using the environment variables provided in the docker-compose.yml file.
 
 MYSQL_ROOT_PASSWORD: The root password for MariaDB.
+
 MYSQL_DATABASE: The name of the WordPress database.
+
 MYSQL_USER: The username for the WordPress database.
+
 MYSQL_PASSWORD: The password for the WordPress database user.
-Restarting Containers
+
+## Restarting Containers
 If you need to restart the containers for any reason (e.g., to apply configuration changes or restart services), you can use:
 ```bash
 docker-compose restart
 ```
-Debugging Docker Containers
+## Debugging Docker Containers
 If you encounter issues with the containers, you can use the following commands to debug:
 
 Check the status of all containers:
