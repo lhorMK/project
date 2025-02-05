@@ -4,7 +4,9 @@ This project provides a simple setup for deploying WordPress with Nginx as a rev
 
 ## Project Structure
 
-your_project_name/ ├── .env # Environment file with configuration variables 
+your_project_name/ 
+
+                   ├── .env # Environment file with configuration variables 
 
                    ├── .gitignore # Ignores sensitive files like .env 
                    
