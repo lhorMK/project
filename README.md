@@ -22,7 +22,7 @@ Before we can enable HTTPS on the server, we need to obtain SSL certificates fro
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/project.git
+    git clone https://github.com/lhorMK/project.git
     cd project
     ```
 
